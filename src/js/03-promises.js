@@ -33,10 +33,10 @@ refs.form.addEventListener('submit', (e) => {
         counter = 0;
         return
       }
-      startPromise(counter, DELAY); 
+      startPromise(counter, DELAY);
       DELAY += STEP;
       
-    }, STEP)},  DELAY)
+    }, STEP)},  Number(refs.firstDalay.value))
   
 })
 
