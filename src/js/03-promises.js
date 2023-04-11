@@ -25,7 +25,8 @@ refs.form.addEventListener('submit', (e) => {
   const STEP = Number(refs.stepDalay.value);
   const amountMessage = Number(refs.form.amount.value);
   
-    const timerId = setInterval(() => {
+    setTimeout(() => {
+      const timerId = setInterval(() => {
       counter++;
       if(counter > amountMessage) {
         clearInterval(timerId);
@@ -35,7 +36,7 @@ refs.form.addEventListener('submit', (e) => {
       startPromise(counter, DELAY); 
       DELAY += STEP;
       
-    }, DELAY);
+    }, STEP)},  DELAY)
   
 })
 
